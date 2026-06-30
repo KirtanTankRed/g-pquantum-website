@@ -162,13 +162,6 @@ body {
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ── Blog card header ─────────────────────── */
-.blog-card-header {
-  height: 160px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 /* ── Stat number ──────────────────────────── */
 .stat-number {
