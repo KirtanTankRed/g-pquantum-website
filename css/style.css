@@ -176,19 +176,6 @@ body {
   min-width: 2ch;
 }
 
-/* ── Testimonial quote mark ───────────────── */
-.quote-mark {
-  font-size: 4rem;
-  line-height: 1;
-  opacity: 0.10;
-  font-family: Georgia, serif;
-  color: var(--gold);
-  position: absolute;
-  top: 12px;
-  right: 20px;
-  pointer-events: none;
-  user-select: none;
-}
 
 /* ── Keyframes ────────────────────────────── */
 @keyframes pulse-gold {
