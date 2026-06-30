@@ -113,14 +113,37 @@ body {
   border-radius: 1rem;
 }
 
-/* ── Partner badge ────────────────────────── */
-.partner-badge {
-  transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
-  cursor: default;
-  user-select: none;
+/* ── Partner logo card ────────────────────── */
+.partner-logo-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 72px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
 }
-.partner-badge:hover {
-  transform: scale(1.04);
+.partner-logo-card:hover {
+  border-color: var(--gold);
+  box-shadow: 0 4px 16px rgba(200, 145, 42, 0.15);
+  transform: translateY(-2px);
+}
+.partner-logo-img {
+  max-height: 40px;
+  max-width: 100%;
+  width: auto;
+  object-fit: contain;
+  /* grayscale by default, full colour on card hover */
+  filter: grayscale(100%);
+  opacity: 0.75;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+.partner-logo-card:hover .partner-logo-img {
+  filter: grayscale(0%);
+  opacity: 1;
 }
 
 /* ── Active nav link ──────────────────────── */
