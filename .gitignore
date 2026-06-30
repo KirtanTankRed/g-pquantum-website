@@ -1,0 +1,10 @@
+# Reference files — do not deploy
+for-claude/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.code-workspace

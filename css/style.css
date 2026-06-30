@@ -1,0 +1,199 @@
+/* =============================================
+   G & P Quantum — Custom Styles
+   ============================================= */
+
+:root {
+  --navy:        #162040;
+  --navy-light:  #1e2d5a;
+  --navy-dark:   #0d1428;
+  --gold:        #C8912A;
+  --gold-light:  #D4A832;
+  --gold-dark:   #a67620;
+  --white:       #ffffff;
+  --gray-light:  #f8f9fa;
+  --text-dark:   #1a1a2e;
+  --text-muted:  #6c757d;
+}
+
+/* ── Base ─────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-dark);
+  overflow-x: hidden;
+  padding-bottom: 64px; /* space for sticky bottom bar */
+}
+
+/* ── Scrollbar ────────────────────────────── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: var(--navy); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+/* ── Logo placeholder ─────────────────────── */
+.logo-text-badge {
+  background: var(--navy);
+  color: var(--gold);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+  border: 2px solid var(--gold);
+}
+
+/* ── Hamburger ────────────────────────────── */
+.hamburger-bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--navy);
+  margin-bottom: 5px;
+  transition: transform 0.3s ease, opacity 0.3s ease, background 0.2s ease;
+  border-radius: 2px;
+}
+.hamburger-bar:last-child { margin-bottom: 0; }
+
+.hamburger-open .hamburger-bar:first-child {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger-open .hamburger-bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.hamburger-open .hamburger-bar:last-child {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── Section gold divider ─────────────────── */
+.gold-divider {
+  display: block;
+  width: 56px;
+  height: 3px;
+  background: linear-gradient(to right, var(--gold), var(--gold-light));
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* ── Hero image clip (desktop) ────────────── */
+@media (min-width: 1024px) {
+  .hero-image-wrapper {
+    clip-path: polygon(6% 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+/* ── Service card icon hover ──────────────── */
+.service-card:hover .service-icon-circle {
+  background-color: var(--gold) !important;
+}
+.service-card:hover .service-icon-circle i {
+  color: #ffffff !important;
+}
+
+/* ── Founder initials placeholder ─────────── */
+.founder-initials {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--navy);
+  color: var(--gold);
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  border-radius: 1rem;
+}
+
+/* ── Partner badge ────────────────────────── */
+.partner-badge {
+  transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  cursor: default;
+  user-select: none;
+}
+.partner-badge:hover {
+  transform: scale(1.04);
+}
+
+/* ── Active nav link ──────────────────────── */
+.nav-active {
+  color: var(--gold) !important;
+  font-weight: 600;
+}
+
+/* ── Floating CTAs ────────────────────────── */
+#floating-ctas {
+  transition: opacity 0.4s ease;
+}
+
+/* ── Sticky bottom bar ────────────────────── */
+#sticky-bottom-bar {
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Blog card header ─────────────────────── */
+.blog-card-header {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Stat number ──────────────────────────── */
+.stat-number {
+  display: inline-block;
+  min-width: 2ch;
+}
+
+/* ── Testimonial quote mark ───────────────── */
+.quote-mark {
+  font-size: 4rem;
+  line-height: 1;
+  opacity: 0.10;
+  font-family: Georgia, serif;
+  color: var(--gold);
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ── Keyframes ────────────────────────────── */
+@keyframes pulse-gold {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(200, 145, 42, 0.5); }
+  70%       { box-shadow: 0 0 0 10px rgba(200, 145, 42, 0); }
+}
+
+.pulse-gold {
+  animation: pulse-gold 2.5s infinite;
+}
+
+/* ── Mobile menu animate-open ─────────────── */
+#mobile-menu {
+  transition: opacity 0.2s ease;
+}
+
+/* ── Smooth icon transitions ──────────────── */
+.service-icon-circle {
+  transition: background-color 0.3s ease;
+}
+.service-icon-circle i {
+  transition: color 0.3s ease;
+}
+
+/* ── Focus ring override (accessibility) ──── */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
